@@ -17,7 +17,6 @@ type Notifier interface {
 	NotifyFail(o model.Order, reason string)                    // 订单回调失败通知
 	NonOrderTransfer(trans model.TronTransfer, wa model.Wallet) // 非订单交易通知
 	TronResourceChange(res model.TronResource)                  // Tron 资源变动通知
-	Welcome()                                                   // 程序启动时的欢迎信息
 	Test() error                                                // 测试通知是否成功
 }
 
@@ -92,15 +91,6 @@ func TronResourceChange(res model.TronResource) {
 		return
 	}
 	go notifier.TronResourceChange(res)
-}
-
-func Welcome() {
-	notifier, err := getNotifier()
-	if err != nil {
-		return
-	}
-
-	go notifier.Welcome()
 }
 
 func Test() error {
