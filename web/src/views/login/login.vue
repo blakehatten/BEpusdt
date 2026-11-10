@@ -4,7 +4,6 @@
       <LoginBanner v-if="isPc" />
       <div class="login_box">
         <div class="login_title">Welcome Back</div>
-        <div class="login_title_desc">一款更好用的个人加密货币收款网关，助力出海需求！</div>
         <LoginForm />
         <!-- <div class="author">by 兔子先森</div> -->
       </div>
@@ -43,10 +42,6 @@ const { isPc } = useDevicesSize();
         margin-bottom: $margin-text;
         font-size: $font-size-title-2;
         color: $color-text-1;
-      }
-      .login_title_desc {
-        font-size: $font-size-body-1;
-        color: $color-text-3;
       }
       .author {
         position: absolute;
