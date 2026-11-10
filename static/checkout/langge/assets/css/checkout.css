@@ -309,7 +309,7 @@ button {
     min-width: 0;
     min-height: min(620px, calc(100vh - 132px));
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
     align-content: start;
     gap: 18px;
     background: linear-gradient(135deg, var(--panel-tint), var(--panel));
@@ -317,25 +317,6 @@ button {
     border-radius: 8px;
     box-shadow: var(--shadow);
     padding: 24px;
-}
-
-.checkout-footer {
-    align-self: end;
-    justify-self: center;
-    color: var(--muted);
-    font-size: 12px;
-    font-weight: 650;
-    line-height: 1.4;
-    text-align: center;
-}
-
-.checkout-footer a {
-    color: var(--green);
-    text-decoration: none;
-}
-
-.checkout-footer a:hover {
-    text-decoration: underline;
 }
 
 .checkout-head {

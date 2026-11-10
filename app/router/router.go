@@ -54,7 +54,8 @@ func Handler() *gin.Engine {
 			return
 		}
 
-		ctx.HTML(200, "index.html", gin.H{"title": conf.Desc, "url": conf.Github})
+		// 不提供公开落地页：Web 只保留收银台与管理后台，其余一律 404。
+		ctx.String(http.StatusNotFound, "404 page not found")
 	})
 
 	{
